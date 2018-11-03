@@ -1,0 +1,1 @@
+"C:\Program Files\IIS Express\appcmd.exe" delete site VueSite

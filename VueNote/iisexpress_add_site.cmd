@@ -1,0 +1,1 @@
+"C:\Program Files\IIS Express\appcmd.exe" add site /name:"VueSite" /bindings:http/*:8188: /physicalPath:"./"
