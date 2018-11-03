@@ -18,33 +18,16 @@
 <body>
 
     <div id="app">
-        <div>name:{{name}}</div>
-        <div>url:{{url}}</div>
-        <input type="text" v-model="site" />
+        <wdq></wdq>
     </div>
 
     <script>
-        new Vue(
-            {
-                el: "#app",
-                data: {
-                    name: "wdq",
-                    url: "http://wdq.com"
-                },
-                computed: {
-                    site: {
-                        get: function () {
-                            return this.name + " " + this.url
-                        },
-                        set: function (newval) {
-                            var arr = newval.split(" ");
-                            this.name = arr[0];
-                            this.url = arr[1];
-                        }
-                    }
-                }
-            }
-        );
+        Vue.component("wdq", {
+            template:"<div>my name is wdq!</div>"
+        });
+        new Vue({
+            el: '#app' 
+        })
     </script>
 </body>
 </html>
