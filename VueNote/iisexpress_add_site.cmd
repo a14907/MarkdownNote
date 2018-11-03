@@ -1,1 +1,1 @@
-"C:\Program Files\IIS Express\appcmd.exe" add site /name:"VueSite" /bindings:http/*:8188: /physicalPath:"./"
+"C:\Program Files\IIS Express\appcmd.exe" add site /name:"VueSite" /bindings:"http://localhost:8188" /physicalPath:"C:\Code\TT\01_前端\Note\VueNote"
