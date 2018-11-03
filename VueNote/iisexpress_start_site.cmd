@@ -1,1 +1,1 @@
-"C:\Program Files\IIS Express\iisexpress.exe" /site:"VueSite" 
+"C:\Program Files\IIS Express\iisexpress.exe" /site:staticsite
