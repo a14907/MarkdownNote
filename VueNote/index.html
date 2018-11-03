@@ -9,32 +9,42 @@
     <title>Vue</title>
     <script src="./vue.js"></script>
     <style>
-        .class1{
-              background: #444;
-              color: #eee;
-            }
-            </style>
-</head> 
+        .class1 {
+            background: #444;
+            color: #eee;
+        }
+    </style>
+</head>
 <body>
+
     <div id="app">
-        <ul>
-            <li v-for="value in object">
-                {{ value }}
-            </li>
-        </ul>
+        <div>name:{{name}}</div>
+        <div>url:{{url}}</div>
+        <input type="text" v-model="site" />
     </div>
 
     <script>
-        new Vue({
-            el: '#app',
-            data: {
-                object: {
-                    name: '菜鸟教程',
-                    url: 'http://www.runoob.com',
-                    slogan: '学的不仅是技术，更是梦想！'
+        new Vue(
+            {
+                el: "#app",
+                data: {
+                    name: "wdq",
+                    url: "http://wdq.com"
+                },
+                computed: {
+                    site: {
+                        get: function () {
+                            return this.name + " " + this.url
+                        },
+                        set: function (newval) {
+                            var arr = newval.split(" ");
+                            this.name = arr[0];
+                            this.url = arr[1];
+                        }
+                    }
                 }
             }
-        })
+        );
     </script>
-</body> 
+</body>
 </html>

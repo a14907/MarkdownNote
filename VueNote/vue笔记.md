@@ -16,6 +16,15 @@
         - [2.5.1. v-bind 缩写](#251-v-bind-)
         - [2.5.2. v-on 缩写](#252-v-on-)
 - [3. Vuejs 条件与循环](#3-vuejs-)
+    - [3.1. 条件判断](#31-)
+        - [3.1.1. v-if](#311-v-if)
+        - [3.1.2. v-else](#312-v-else)
+        - [3.1.3. v-else-if](#313-v-else-if)
+        - [3.1.4. v-show](#314-v-show)
+- [4. 循环语句](#4-)
+    - [4.1. v-for 迭代对象](#41-v-for-)
+    - [4.2. v-for 迭代整数](#42-v-for-)
+- [5. Vuejs 计算属性](#5-vuejs-)
 <!-- /TOC -->
 
 # 1. Vuejs起步
@@ -240,8 +249,8 @@ Vue.js 为两个最为常用的指令提供了特别的缩写：
 	<a @click="doSomething"></a>
 
 # 3. Vuejs 条件与循环
-## 条件判断
-### v-if
+## 3.1. 条件判断
+### 3.1.1. v-if
 条件判断使用 v-if 指令：
 
     <div id="app">
@@ -271,7 +280,7 @@ Vue.js 为两个最为常用的指令提供了特别的缩写：
       <h1>Yes</h1>
     {{/if}}
 
-### v-else
+### 3.1.2. v-else
 可以用 v-else 指令给 v-if 添加一个 "else" 块：
 
     <div id="app">
@@ -289,7 +298,7 @@ Vue.js 为两个最为常用的指令提供了特别的缩写：
     })
     </script>
 
-### v-else-if
+### 3.1.3. v-else-if
 v-else-if 在 2.1.0 新增，顾名思义，用作 v-if 的 else-if 块。可以链式的多次使用：
 
     <div id="app">
@@ -316,12 +325,12 @@ v-else-if 在 2.1.0 新增，顾名思义，用作 v-if 的 else-if 块。可以
     })
     </script>
 
-### v-show
+### 3.1.4. v-show
 我们也可以使用 v-show 指令来根据条件展示元素：
 
     <h1 v-show="ok">Hello!</h1>
 
-# 循环语句
+# 4. 循环语句
 
 循环使用 v-for 指令。
 
@@ -359,7 +368,7 @@ v-for 可以绑定数据到数组来渲染一个列表：
       </template>
     </ul>
 
-## v-for 迭代对象
+## 4.1. v-for 迭代对象
 
 v-for 可以通过一个对象的属性来迭代数据：
 
@@ -393,3 +402,128 @@ v-for 可以通过一个对象的属性来迭代数据：
         </li>
       </ul>
     </div>
+
+第三个参数为索引：
+
+    <div id="app">
+      <ul>
+        <li v-for="(value, key, index) in object">
+         {{ index }}. {{ key }} : {{ value }}
+        </li>
+      </ul>
+    </div>
+
+## 4.2. v-for 迭代整数
+
+v-for 也可以循环整数
+
+    <div id="app">
+      <ul>
+        <li v-for="n in 10">
+         {{ n }}
+        </li>
+      </ul>
+    </div>
+
+# 5. Vuejs 计算属性
+
+计算属性关键词: computed。
+
+计算属性在处理一些复杂逻辑时是很有用的。
+
+可以看下以下反转字符串的例子：
+
+    <div id="app">
+      {{ message.split('').reverse().join('') }}
+    </div>
+
+实例 1 中模板变的很复杂起来，也不容易看懂理解。
+接下来我们看看使用了计算属性的实例：
+
+    <div id="app">
+      <p>原始字符串: {{ message }}</p>
+      <p>计算后反转字符串: {{ reversedMessage }}</p>
+    </div>
+ 
+    <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        message: 'Runoob!'
+      },
+      computed: {
+        // 计算属性的 getter
+        reversedMessage: function () {
+          // `this` 指向 vm 实例
+          return this.message.split('').reverse().join('')
+        }
+      }
+    })
+    </script>
+
+实例 2 中声明了一个计算属性 reversedMessage 。
+
+提供的函数将用作属性 vm.reversedMessage 的 getter 。
+
+vm.reversedMessage 依赖于 vm.message，在 vm.message 发生改变时，vm.reversedMessage 也会更新。
+
+## computed vs methods
+
+我们可以使用 methods 来替代 computed，效果上两个都是一样的，但是 computed 是基于它的依赖缓存，只有相关依赖发生改变时才会重新取值。而使用 methods ，在重新渲染的时候，函数总会重新调用执行。 
+
+可以说使用 computed 性能会更好，但是如果你不希望缓存，你可以使用 methods 属性。
+
+## computed setter
+
+computed 属性默认只有 getter ，不过在需要时你也可以提供一个 setter ： 
+
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        name: 'Google',
+        url: 'http://www.google.com'
+      },
+      computed: {
+        site: {
+          // getter
+          get: function () {
+            return this.name + ' ' + this.url
+          },
+          // setter
+          set: function (newValue) {
+            var names = newValue.split(' ')
+            this.name = names[0]
+            this.url = names[names.length - 1]
+          }
+        }
+      }
+    })
+    // 调用 setter， vm.name 和 vm.url 也会被对应更新
+    vm.site = '菜鸟教程 http://www.runoob.com';
+    document.write('name: ' + vm.name);
+    document.write('<br>');
+    document.write('url: ' + vm.url);
+
+从实例运行结果看在运行 vm.site = '菜鸟教程 http://www.runoob.com'; 时，setter 会被调用， vm.name 和 vm.url 也会被对应更新。
+
+# Vue.js 监听属性 
+
+将介绍 Vue.js 监听属性 watch，我们可以通过 watch 来响应数据的变化。
+
+以下实例通过使用 watch 实现计数器：
+
+    <div id = "app">
+        <p style = "font-size:25px;">计数器: {{ counter }}</p>
+        <button @click = "counter++" style = "font-size:25px;">点我</button>
+    </div>
+    <script type = "text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            counter: 1
+        }
+    });
+    vm.$watch('counter', function(nval, oval) {
+        alert('计数器值的变化 :' + oval + ' 变为 ' + nval + '!');
+    });
+    </script>
