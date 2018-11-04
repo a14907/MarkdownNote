@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,19 +14,27 @@
         }
     </style>
 </head>
+
 <body>
-
     <div id="app">
-        <wdq></wdq>
+        <p style="font-size:25px;">计数器: {{ products.id }}</p>
+        <button @click="products.id++" style="font-size:25px;">点我</button>
     </div>
-
-    <script>
-        Vue.component("wdq", {
-            template:"<div>my name is wdq!</div>"
+    <script type="text/javascript">
+        var myproduct = { "id": 1, name: "book", "price": "20.00" };
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                counter: 1,
+                products: myproduct
+            }
         });
-        new Vue({
-            el: '#app' 
-        })
+        vm.products.qty = "1";
+        console.log(vm);
+        vm.$watch('counter', function (nval, oval) {
+            alert('计数器值的变化 :' + oval + ' 变为 ' + nval + '!');
+        });
     </script>
 </body>
+
 </html>
