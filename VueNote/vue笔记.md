@@ -1,101 +1,109 @@
 
 <!-- TOC -->
 
-- [1. 使用淘宝 NPM 镜像](#1-使用淘宝-npm-镜像)
-- [2. Vuejs起步](#2-vuejs起步)
-- [3. Vuejs 模板语法](#3-vuejs-模板语法)
-    - [3.1. 插值](#31-插值)
-        - [3.1.1. 文本](#311-文本)
-        - [3.1.2. Html](#312-html)
-        - [3.1.3. 属性](#313-属性)
-        - [3.1.4. 表达式](#314-表达式)
-    - [3.2. 指令](#32-指令)
-        - [3.2.1. 参数](#321-参数)
-        - [3.2.2. 修饰符](#322-修饰符)
-    - [3.3. 用户输入](#33-用户输入)
-    - [3.4. 过滤器](#34-过滤器)
-    - [3.5. 缩写](#35-缩写)
-        - [3.5.1. v-bind 缩写](#351-v-bind-缩写)
-        - [3.5.2. v-on 缩写](#352-v-on-缩写)
-- [4. Vuejs 条件与循环](#4-vuejs-条件与循环)
-    - [4.1. 条件判断](#41-条件判断)
-        - [4.1.1. v-if](#411-v-if)
-        - [4.1.2. v-else](#412-v-else)
-        - [4.1.3. v-else-if](#413-v-else-if)
-        - [4.1.4. v-show](#414-v-show)
-- [5. 循环语句](#5-循环语句)
-    - [5.1. v-for 迭代对象](#51-v-for-迭代对象)
-    - [5.2. v-for 迭代整数](#52-v-for-迭代整数)
-- [6. Vuejs 计算属性](#6-vuejs-计算属性)
-    - [6.1. computed vs methods](#61-computed-vs-methods)
-    - [6.2. computed setter](#62-computed-setter)
-- [7. Vuejs 监听属性](#7-vuejs-监听属性)
-- [8. Vuejs 样式绑定](#8-vuejs-样式绑定)
-    - [8.1. Vuejs class](#81-vuejs-class)
-    - [8.2. class 属性绑定](#82-class-属性绑定)
-        - [8.2.1. 数组语法](#821-数组语法)
-    - [8.3. Vue.js style(内联样式)](#83-vuejs-style内联样式)
-- [9. Vue.js 事件处理器](#9-vuejs-事件处理器)
-    - [9.1. 事件修饰符](#91-事件修饰符)
-    - [9.2. 按键修饰符](#92-按键修饰符)
-- [10. Vue.js 表单](#10-vuejs-表单)
-    - [10.1. 复选框](#101-复选框)
-    - [10.2. 单选按钮](#102-单选按钮)
-    - [10.3. select 列表](#103-select-列表)
-    - [10.4. 修饰符](#104-修饰符)
-        - [10.4.1. lazy](#1041-lazy)
-        - [10.4.2. number](#1042-number)
-        - [10.4.3. trim](#1043-trim)
-- [11. Vue.js 组件](#11-vuejs-组件)
-    - [11.1. 全局组件](#111-全局组件)
-    - [11.2. 局部组件](#112-局部组件)
-    - [11.3. 动态 Prop](#113-动态-prop)
-    - [11.4. Prop 验证](#114-prop-验证)
-    - [11.5. 自定义事件](#115-自定义事件)
-- [12. Vue.js 自定义指令](#12-vuejs-自定义指令)
-    - [12.1. 钩子](#121-钩子)
-        - [12.1.1. 钩子函数](#1211-钩子函数)
-        - [12.1.2. 钩子函数参数](#1212-钩子函数参数)
-- [13. Vue.js 路由](#13-vuejs-路由)
-    - [13.1. 安装](#131-安装)
-        - [13.1.1. 、直接下载 / CDN](#1311-直接下载--cdn)
-        - [13.1.2. NPM](#1312-npm)
-    - [13.2. 简单实例](#132-简单实例)
-    - [13.3. <router-link> 相关属性](#133-router-link-相关属性)
-        - [13.3.1. to](#1331-to)
-        - [13.3.2. replace](#1332-replace)
-        - [13.3.3. append](#1333-append)
-        - [13.3.4. tag](#1334-tag)
-        - [13.3.5. active-class](#1335-active-class)
-        - [13.3.6. exact-active-class](#1336-exact-active-class)
-        - [13.3.7. event](#1337-event)
-    - [13.4. NPM 路由实例](#134-npm-路由实例)
-- [Vue.js 过渡 & 动画](#vuejs-过渡--动画)
-    - [过渡](#过渡)
-        - [语法格式](#语法格式)
-        - [CSS 过渡](#css-过渡)
-        - [CSS 动画](#css-动画)
-        - [自定义过渡的类名](#自定义过渡的类名)
-        - [同时使用过渡和动画](#同时使用过渡和动画)
-        - [显性的过渡持续时间](#显性的过渡持续时间)
-    - [JavaScript 钩子](#javascript-钩子)
-    - [初始渲染的过渡](#初始渲染的过渡)
-        - [多个元素的过渡](#多个元素的过渡)
-- [Vue.js 混入](#vuejs-混入)
-    - [选项合并](#选项合并)
-    - [全局混入](#全局混入)
-- [Vue.js Ajax(vue-resource)](#vuejs-ajaxvue-resource)
-    - [Get 请求](#get-请求)
-    - [post 请求](#post-请求)
-    - [语法 & API](#语法--api)
-- [Vue.js 响应接口](#vuejs-响应接口)
-    - [Vue.set](#vueset)
-    - [Vue.delete](#vuedelete)
-- [Vue.js 实例](#vuejs-实例)
+- [1. 参考资料：](#1-参考资料)
+- [2. 使用淘宝 NPM 镜像](#2-使用淘宝-npm-镜像)
+- [3. Vuejs起步](#3-vuejs起步)
+- [4. Vuejs 模板语法](#4-vuejs-模板语法)
+    - [4.1. 插值](#41-插值)
+        - [4.1.1. 文本](#411-文本)
+        - [4.1.2. Html](#412-html)
+        - [4.1.3. 属性](#413-属性)
+        - [4.1.4. 表达式](#414-表达式)
+    - [4.2. 指令](#42-指令)
+        - [4.2.1. 参数](#421-参数)
+        - [4.2.2. 修饰符](#422-修饰符)
+    - [4.3. 用户输入](#43-用户输入)
+    - [4.4. 过滤器](#44-过滤器)
+    - [4.5. 缩写](#45-缩写)
+        - [4.5.1. v-bind 缩写](#451-v-bind-缩写)
+        - [4.5.2. v-on 缩写](#452-v-on-缩写)
+- [5. Vuejs 条件与循环](#5-vuejs-条件与循环)
+    - [5.1. 条件判断](#51-条件判断)
+        - [5.1.1. v-if](#511-v-if)
+        - [5.1.2. v-else](#512-v-else)
+        - [5.1.3. v-else-if](#513-v-else-if)
+        - [5.1.4. v-show](#514-v-show)
+- [6. 循环语句](#6-循环语句)
+    - [6.1. v-for 迭代对象](#61-v-for-迭代对象)
+    - [6.2. v-for 迭代整数](#62-v-for-迭代整数)
+- [7. Vuejs 计算属性](#7-vuejs-计算属性)
+    - [7.1. computed vs methods](#71-computed-vs-methods)
+    - [7.2. computed setter](#72-computed-setter)
+- [8. Vuejs 监听属性](#8-vuejs-监听属性)
+- [9. Vuejs 样式绑定](#9-vuejs-样式绑定)
+    - [9.1. Vuejs class](#91-vuejs-class)
+    - [9.2. class 属性绑定](#92-class-属性绑定)
+        - [9.2.1. 数组语法](#921-数组语法)
+    - [9.3. Vue.js style(内联样式)](#93-vuejs-style内联样式)
+- [10. Vue.js 事件处理器](#10-vuejs-事件处理器)
+    - [10.1. 事件修饰符](#101-事件修饰符)
+    - [10.2. 按键修饰符](#102-按键修饰符)
+- [11. Vue.js 表单](#11-vuejs-表单)
+    - [11.1. 复选框](#111-复选框)
+    - [11.2. 单选按钮](#112-单选按钮)
+    - [11.3. select 列表](#113-select-列表)
+    - [11.4. 修饰符](#114-修饰符)
+        - [11.4.1. lazy](#1141-lazy)
+        - [11.4.2. number](#1142-number)
+        - [11.4.3. trim](#1143-trim)
+- [12. Vue.js 组件](#12-vuejs-组件)
+    - [12.1. 全局组件](#121-全局组件)
+    - [12.2. 局部组件](#122-局部组件)
+    - [12.3. 动态 Prop](#123-动态-prop)
+    - [12.4. Prop 验证](#124-prop-验证)
+    - [12.5. 自定义事件](#125-自定义事件)
+- [13. Vue.js 自定义指令](#13-vuejs-自定义指令)
+    - [13.1. 钩子](#131-钩子)
+        - [13.1.1. 钩子函数](#1311-钩子函数)
+        - [13.1.2. 钩子函数参数](#1312-钩子函数参数)
+- [14. Vue.js 路由](#14-vuejs-路由)
+    - [14.1. 安装](#141-安装)
+        - [14.1.1. 、直接下载 / CDN](#1411-直接下载--cdn)
+        - [14.1.2. NPM](#1412-npm)
+    - [14.2. 简单实例](#142-简单实例)
+    - [14.3. <router-link> 相关属性](#143-router-link-相关属性)
+        - [14.3.1. to](#1431-to)
+        - [14.3.2. replace](#1432-replace)
+        - [14.3.3. append](#1433-append)
+        - [14.3.4. tag](#1434-tag)
+        - [14.3.5. active-class](#1435-active-class)
+        - [14.3.6. exact-active-class](#1436-exact-active-class)
+        - [14.3.7. event](#1437-event)
+    - [14.4. NPM 路由实例](#144-npm-路由实例)
+- [15. Vue.js 过渡 & 动画](#15-vuejs-过渡--动画)
+    - [15.1. 过渡](#151-过渡)
+        - [15.1.1. 语法格式](#1511-语法格式)
+        - [15.1.2. CSS 过渡](#1512-css-过渡)
+        - [15.1.3. CSS 动画](#1513-css-动画)
+        - [15.1.4. 自定义过渡的类名](#1514-自定义过渡的类名)
+        - [15.1.5. 同时使用过渡和动画](#1515-同时使用过渡和动画)
+        - [15.1.6. 显性的过渡持续时间](#1516-显性的过渡持续时间)
+    - [15.2. JavaScript 钩子](#152-javascript-钩子)
+    - [15.3. 初始渲染的过渡](#153-初始渲染的过渡)
+        - [15.3.1. 多个元素的过渡](#1531-多个元素的过渡)
+- [16. Vue.js 混入](#16-vuejs-混入)
+    - [16.1. 选项合并](#161-选项合并)
+    - [16.2. 全局混入](#162-全局混入)
+- [17. Vue.js Ajax(vue-resource)](#17-vuejs-ajaxvue-resource)
+    - [17.1. Get 请求](#171-get-请求)
+    - [17.2. post 请求](#172-post-请求)
+    - [17.3. 语法 & API](#173-语法--api)
+- [18. Vue.js 响应接口](#18-vuejs-响应接口)
+    - [18.1. Vue.set](#181-vueset)
+    - [18.2. Vue.delete](#182-vuedelete)
+- [19. Vue.js 实例](#19-vuejs-实例)
 
 <!-- /TOC -->
 
-# 1. 使用淘宝 NPM 镜像
+# 1. 参考资料：
+Webpack 入门教程：http://www.runoob.com/w3cnote/webpack-tutorial.html
+
+官方文档：http://vuejs.org/v2/guide/syntax.html
+
+中文文档: https://cn.vuejs.org/v2/guide/syntax.html
+
+# 2. 使用淘宝 NPM 镜像
 
 大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。
 
@@ -111,7 +119,7 @@
     
 更多信息可以查阅：http://npm.taobao.org/。
 
-# 2. Vuejs起步
+# 3. Vuejs起步
 	<div id="vue_det">
 		<h1>site : {{site}}</h1>
 		<h1>url : {{url}}</h1>
@@ -144,15 +152,15 @@ methods 用于定义的函数，可以通过 return 来返回函数值。
 	document.write("<br>") // true
 	document.write(vm.$el === document.getElementById('vue_det')) // true
 
-# 3. Vuejs 模板语法
-## 3.1. 插值
-### 3.1.1. 文本
+# 4. Vuejs 模板语法
+## 4.1. 插值
+### 4.1.1. 文本
 数据绑定最常见的形式就是使用 {{...}}（双大括号）的文本插值：
 
-### 3.1.2. Html
+### 4.1.2. Html
 使用 v-html 指令用于输出 html 代码：
 
-### 3.1.3. 属性
+### 4.1.3. 属性
 HTML 属性中的值应使用 v-bind 指令。
 以下实例判断 class1 的值，如果为 true 使用 class1 类的样式，否则不使用该类：
 
@@ -190,10 +198,10 @@ HTML 属性中的值应使用 v-bind 指令。
 	</body>
 	</html>
 
-### 3.1.4. 表达式
+### 4.1.4. 表达式
 Vue.js 都提供了完全的 JavaScript 表达式支持。
 
-## 3.2. 指令
+## 4.2. 指令
 指令是带有 v- 前缀的特殊属性。
 指令用于在表达式的值改变时，将某些行为应用到 DOM 上。如下例子：
 
@@ -210,7 +218,7 @@ Vue.js 都提供了完全的 JavaScript 表达式支持。
 	})
 	</script>
 
-### 3.2.1. 参数
+### 4.2.1. 参数
 参数在指令后以冒号指明。例如， v-bind 指令被用来响应地更新 HTML 属性：
 
 	<div id="app">
@@ -229,12 +237,12 @@ Vue.js 都提供了完全的 JavaScript 表达式支持。
 
 	<a v-on:click="doSomething">
 
-### 3.2.2. 修饰符
+### 4.2.2. 修饰符
 修饰符是以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。例如，.prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()：
 
 	<form v-on:submit.prevent="onSubmit"></form>
 
-## 3.3. 用户输入
+## 4.3. 用户输入
 在 input 输入框中我们可以使用 v-model 指令来实现双向数据绑定：
 
 	<div id="app">
@@ -275,7 +283,7 @@ v-model 指令用来在 input、select、text、checkbox、radio 等表单控件
 	})
 	</script>
 
-## 3.4. 过滤器
+## 4.4. 过滤器
 Vue.js 允许你自定义过滤器，被用作一些常见的文本格式化。由"管道符"指示, 格式如下：
 
 	<!-- 在两个大括号中 -->
@@ -316,25 +324,25 @@ Vue.js 允许你自定义过滤器，被用作一些常见的文本格式化。�
 
 这里，message 是第一个参数，字符串 'arg1' 将传给过滤器作为第二个参数， arg2 表达式的值将被求值然后传给过滤器作为第三个参数。
 
-## 3.5. 缩写
+## 4.5. 缩写
 Vue.js 为两个最为常用的指令提供了特别的缩写：
-### 3.5.1. v-bind 缩写
+### 4.5.1. v-bind 缩写
 
 	<!-- 完整语法 -->
 	<a v-bind:href="url"></a>
 	<!-- 缩写 -->
 	<a :href="url"></a>
 
-### 3.5.2. v-on 缩写
+### 4.5.2. v-on 缩写
 
 	<!-- 完整语法 -->
 	<a v-on:click="doSomething"></a>
 	<!-- 缩写 -->
 	<a @click="doSomething"></a>
 
-# 4. Vuejs 条件与循环
-## 4.1. 条件判断
-### 4.1.1. v-if
+# 5. Vuejs 条件与循环
+## 5.1. 条件判断
+### 5.1.1. v-if
 条件判断使用 v-if 指令：
 
     <div id="app">
@@ -364,7 +372,7 @@ Vue.js 为两个最为常用的指令提供了特别的缩写：
       <h1>Yes</h1>
     {{/if}}
 
-### 4.1.2. v-else
+### 5.1.2. v-else
 可以用 v-else 指令给 v-if 添加一个 "else" 块：
 
     <div id="app">
@@ -382,7 +390,7 @@ Vue.js 为两个最为常用的指令提供了特别的缩写：
     })
     </script>
 
-### 4.1.3. v-else-if
+### 5.1.3. v-else-if
 v-else-if 在 2.1.0 新增，顾名思义，用作 v-if 的 else-if 块。可以链式的多次使用：
 
     <div id="app">
@@ -409,12 +417,12 @@ v-else-if 在 2.1.0 新增，顾名思义，用作 v-if 的 else-if 块。可以
     })
     </script>
 
-### 4.1.4. v-show
+### 5.1.4. v-show
 我们也可以使用 v-show 指令来根据条件展示元素：
 
     <h1 v-show="ok">Hello!</h1>
 
-# 5. 循环语句
+# 6. 循环语句
 
 循环使用 v-for 指令。
 
@@ -452,7 +460,7 @@ v-for 可以绑定数据到数组来渲染一个列表：
       </template>
     </ul>
 
-## 5.1. v-for 迭代对象
+## 6.1. v-for 迭代对象
 
 v-for 可以通过一个对象的属性来迭代数据：
 
@@ -497,7 +505,7 @@ v-for 可以通过一个对象的属性来迭代数据：
       </ul>
     </div>
 
-## 5.2. v-for 迭代整数
+## 6.2. v-for 迭代整数
 
 v-for 也可以循环整数
 
@@ -509,7 +517,7 @@ v-for 也可以循环整数
       </ul>
     </div>
 
-# 6. Vuejs 计算属性
+# 7. Vuejs 计算属性
 
 计算属性关键词: computed。
 
@@ -551,13 +559,13 @@ v-for 也可以循环整数
 
 vm.reversedMessage 依赖于 vm.message，在 vm.message 发生改变时，vm.reversedMessage 也会更新。
 
-## 6.1. computed vs methods
+## 7.1. computed vs methods
 
 我们可以使用 methods 来替代 computed，效果上两个都是一样的，但是 computed 是基于它的依赖缓存，只有相关依赖发生改变时才会重新取值。而使用 methods ，在重新渲染的时候，函数总会重新调用执行。 
 
 可以说使用 computed 性能会更好，但是如果你不希望缓存，你可以使用 methods 属性。
 
-## 6.2. computed setter
+## 7.2. computed setter
 
 computed 属性默认只有 getter ，不过在需要时你也可以提供一个 setter ： 
 
@@ -590,7 +598,7 @@ computed 属性默认只有 getter ，不过在需要时你也可以提供一个
 
 从实例运行结果看在运行 vm.site = '菜鸟教程 http://www.runoob.com'; 时，setter 会被调用， vm.name 和 vm.url 也会被对应更新。
 
-# 7. Vuejs 监听属性
+# 8. Vuejs 监听属性
 
 将介绍 Vue.js 监听属性 watch，我们可以通过 watch 来响应数据的变化。
 
@@ -652,15 +660,15 @@ computed 属性默认只有 getter ，不过在需要时你也可以提供一个
 
 当我们再输入框输入数据时，watch 会实时监听数据变化并改变自身的值
 
-# 8. Vuejs 样式绑定
+# 9. Vuejs 样式绑定
 
-## 8.1. Vuejs class
+## 9.1. Vuejs class
 
 class 与 style 是 HTML 元素的属性，用于设置元素的样式，我们可以用 v-bind 来设置样式属性。
 
 Vue.js v-bind 在处理 class 和 style 时， 专门增强了它。表达式的结果类型除了字符串之外，还可以是对象或数组。
 
-## 8.2. class 属性绑定
+## 9.2. class 属性绑定
 
 我们可以为 v-bind:class 设置一个对象，从而动态的切换 class:
 
@@ -700,7 +708,7 @@ Vue.js v-bind 在处理 class 和 style 时， 专门增强了它。表达式的
       }
     })
 
-### 8.2.1. 数组语法
+### 9.2.1. 数组语法
 
 我们可以把一个数组传给 v-bind:class ，实例如下：
 
@@ -710,7 +718,7 @@ Vue.js v-bind 在处理 class 和 style 时， 专门增强了它。表达式的
 
     <div v-bind:class="[errorClass ,isActive ? activeClass : '']"></div>
 
-## 8.3. Vue.js style(内联样式)
+## 9.3. Vue.js style(内联样式)
 
 我们可以在 v-bind:style 直接设置样式：
 
@@ -730,7 +738,7 @@ v-bind:style 可以使用数组将多个样式对象应用到一个元素上：
       <div v-bind:style="[baseStyles, overridingStyles]">菜鸟教程</div>
     </div>
 
-# 9. Vue.js 事件处理器
+# 10. Vue.js 事件处理器
 
 事件监听可以使用 v-on 指令：
 
@@ -797,7 +805,7 @@ v-on 可以接收一个定义的方法来调用。
     })
     </script>
 
-## 9.1. 事件修饰符
+## 10.1. 事件修饰符
 
 Vue.js 为 v-on 提供了事件修饰符来处理 DOM 事件细节，如：event.preventDefault() 或 event.stopPropagation()。
 
@@ -825,7 +833,7 @@ Vue.js通过由点(.)表示的指令后缀来调用修饰符。
     <!-- click 事件只能点击一次，2.1.4版本新增 -->
     <a v-on:click.once="doThis"></a>
 
-## 9.2. 按键修饰符
+## 10.2. 按键修饰符
 
 Vue 允许为 v-on 在监听键盘事件时添加按键修饰符：
 
@@ -862,7 +870,7 @@ Vue 允许为 v-on 在监听键盘事件时添加按键修饰符：
     <!-- Ctrl + Click -->
     <div @click.ctrl="doSomething">Do something</div>
 
-# 10. Vue.js 表单
+# 11. Vue.js 表单
 
 这节我们为大家介绍 Vue.js 表单上的应用。
 
@@ -890,7 +898,7 @@ v-model 会根据控件类型自动选取正确的方法来更新元素。
     })
     </script>
 
-## 10.1. 复选框
+## 11.1. 复选框
 
 复选框如果是一个为逻辑值，如果是多个则绑定到同一个数组：
 
@@ -920,7 +928,7 @@ v-model 会根据控件类型自动选取正确的方法来更新元素。
     })
     </script>
 
-## 10.2. 单选按钮
+## 11.2. 单选按钮
 
 以下实例中演示了单选按钮的双向数据绑定：
 
@@ -943,7 +951,7 @@ v-model 会根据控件类型自动选取正确的方法来更新元素。
     })
     </script>
 
-## 10.3. select 列表
+## 11.3. select 列表
 
 以下实例中演示了下拉列表的双向数据绑定：
 
@@ -968,28 +976,28 @@ v-model 会根据控件类型自动选取正确的方法来更新元素。
     })
     </script>
 
-## 10.4. 修饰符 
+## 11.4. 修饰符 
 
-### 10.4.1. lazy 
+### 11.4.1. lazy 
 
 在默认情况下， v-model 在 input 事件中同步输入框的值与数据，但你可以添加一个修饰符 lazy ，从而转变为在 change 事件中同步：
 
     <!-- 在 "change" 而不是 "input" 事件中更新 -->
     <input v-model.lazy="msg" >
 
-### 10.4.2. number 
+### 11.4.2. number 
 
 如果想自动将用户的输入值转为 Number 类型（如果原值的转换结果为 NaN 则返回原值），可以添加一个修饰符 number 给 v-model 来处理输入值：
 
     <input v-model.number="age" type="number">
 
-### 10.4.3. trim
+### 11.4.3. trim
 
 如果要自动过滤用户输入的首尾空格，可以添加 trim 修饰符到 v-model 上过滤输入：
 
     <input v-model.trim="msg">
 
-# 11. Vue.js 组件
+# 12. Vue.js 组件
 
 组件（Component）是 Vue.js 最强大的功能之一。
 
@@ -1005,7 +1013,7 @@ tagName 为组件名，options 为配置选项。注册后，我们可以使用�
 
     <tagName></tagName>
 
-## 11.1. 全局组件
+## 12.1. 全局组件
 
 所有实例都能用全局组件。
 
@@ -1028,7 +1036,7 @@ tagName 为组件名，options 为配置选项。注册后，我们可以使用�
     })
     </script>
 
-## 11.2. 局部组件
+## 12.2. 局部组件
 
 我们也可以在实例选项中注册局部组件，这样组件只能在这个实例中使用：
 
@@ -1055,7 +1063,7 @@ tagName 为组件名，options 为配置选项。注册后，我们可以使用�
     })
     </script>
 
-## 11.3. 动态 Prop
+## 12.3. 动态 Prop
 
 类似于用 v-bind 绑定 HTML 特性到一个表达式，也可以用 v-bind 动态绑定 props 的值到父组件的数据中。每当父组件的数据变化时，该变化也会传导给子组件：
 
@@ -1110,7 +1118,7 @@ tagName 为组件名，options 为配置选项。注册后，我们可以使用�
     </script>
 注意: prop 是单向绑定的：当父组件的属性变化时，将传导给子组件，但是不会反过来。
 
-## 11.4. Prop 验证
+## 12.4. Prop 验证
 组件可以为 props 指定验证要求。
 
 prop 是一个对象而不是字符串数组时，它包含验证要求：
@@ -1158,7 +1166,7 @@ type 可以是下面原生构造器：
     
 type 也可以是一个自定义构造器，使用 instanceof 检测。
 
-## 11.5. 自定义事件
+## 12.5. 自定义事件
 
 父组件是使用 props 传递数据给子组件，但如果子组件要把数据传递回去，就需要使用自定义事件！
 
@@ -1211,7 +1219,7 @@ type 也可以是一个自定义构造器，使用 instanceof 检测。
 
     <my-component v-on:click.native="doTheThing"></my-component>
 
-# 12. Vue.js 自定义指令
+# 13. Vue.js 自定义指令
 
 除了默认设置的核心指令( v-model 和 v-show ), Vue 也允许注册自定义指令。
 
@@ -1261,9 +1269,9 @@ type 也可以是一个自定义构造器，使用 instanceof 检测。
     })
     </script>
 
-## 12.1. 钩子
+## 13.1. 钩子
 
-### 12.1.1. 钩子函数
+### 13.1.1. 钩子函数
 
 指令定义函数提供了几个钩子函数（可选）：
 
@@ -1277,7 +1285,7 @@ componentUpdated: 被绑定元素所在模板完成一次更新周期时调用�
 
 unbind: 只调用一次， 指令与元素解绑时调用。
 
-### 12.1.2. 钩子函数参数
+### 13.1.2. 钩子函数参数
 
 钩子函数的参数有：
 
@@ -1347,7 +1355,7 @@ unbind: 只调用一次， 指令与元素解绑时调用。
     })
     </script>
  
-# 13. Vue.js 路由
+# 14. Vue.js 路由
 
 本章节我们将为大家介绍 Vue.js 路由。
 
@@ -1359,17 +1367,17 @@ Vue.js 路由需要载入 [vue-router 库](https://github.com/vuejs/vue-router)
 
 中文文档地址：[vue-router文档](http://router.vuejs.org/zh-cn/)。
 
-## 13.1. 安装
-### 13.1.1. 、直接下载 / CDN
+## 14.1. 安装
+### 14.1.1. 、直接下载 / CDN
     https://unpkg.com/vue-router/dist/vue-router.js
 
-### 13.1.2. NPM
+### 14.1.2. NPM
 
 推荐使用淘宝镜像：
 
     cnpm install vue-router
 
-## 13.2. 简单实例
+## 14.2. 简单实例
 
 Vue.js + vue-router 可以很简单的实现单页应用。
 
@@ -1434,11 +1442,11 @@ js:
     
     class ="router-link-exact-active router-link-active"。
 
-## 13.3. <router-link> 相关属性
+## 14.3. <router-link> 相关属性
 
 接下来我们可以了解下更多关于 <router-link> 的属性。
 
-### 13.3.1. to
+### 14.3.1. to
 
 表示目标路由的链接。 当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标位置的对象。
 
@@ -1462,19 +1470,19 @@ js:
     <!-- 带查询参数，下面的结果为 /register?plan=private -->
     <router-link :to="{ path: 'register', query: { plan: 'private' }}">Register</router-link>
 
-### 13.3.2. replace
+### 14.3.2. replace
 
 设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，导航后不会留下 history 记录。
 
     <router-link :to="{ path: '/abc'}" replace></router-link>
 
-### 13.3.3. append
+### 14.3.3. append
 
 设置 append 属性后，则在当前 (相对) 路径前添加基路径。例如，我们从 /a 导航到一个相对路径 b，如果没有配置 append，则路径为 /b，如果配了，则为 /a/b
 
     <router-link :to="{ path: 'relative/path'}" append></router-link>
 
-### 13.3.4. tag
+### 14.3.4. tag
 
 有时候想要 <router-link> 渲染成某种标签，例如 <li>。 于是我们使用 tag prop 类指定何种标签，同样它还是会监听点击，触发导航。
 
@@ -1482,7 +1490,7 @@ js:
     <!-- 渲染结果 -->
     <li>foo</li>    
 
-### 13.3.5. active-class
+### 14.3.5. active-class
 
 设置 链接激活时使用的 CSS 类名。可以通过以下代码来替代。
 
@@ -1498,7 +1506,7 @@ js:
 
 注意这里 class 使用 active_class="_active"。    
 
-### 13.3.6. exact-active-class
+### 14.3.6. exact-active-class
 
 配置当链接被精确匹配的时候应该激活的 class。可以通过以下代码来替代。
 
@@ -1507,7 +1515,7 @@ js:
       <router-link v-bind:to = "{ path: '/route2'}" tag = "span">Router Link 2</router-link>
     </p>
 
-### 13.3.7. event
+### 14.3.7. event
 
 声明可以用来触发导航的事件。可以是一个字符串或是一个包含字符串的数组。
 
@@ -1515,7 +1523,7 @@ js:
 
 以上代码设置了 event 为 mouseover ，及在鼠标移动到 Router Link 1 上时导航的 HTML 内容会发生改变。    
 
-## 13.4. NPM 路由实例
+## 14.4. NPM 路由实例
 接下来我们演示了一个使用 npm 简单的路由实例，开始前，请先下载该实例源代码：
 
   [路由实例](http://static.runoob.com/download/vue-2.0-simple-routing-example-master.zip)
@@ -1538,17 +1546,17 @@ js:
 
 ![运行效果图](https://www.runoob.com/wp-content/uploads/2017/01/30646E50-8956-47F0-9DBE-4A2023B873E7.jpg)
 
-# Vue.js 过渡 & 动画
+# 15. Vue.js 过渡 & 动画
 
 本章节我们主要讨论 Vue.js 的过渡效果与动画效果。
 
-## 过渡
+## 15.1. 过渡
 
 Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。
 
 Vue 提供了内置的过渡封装组件，该组件用于包裹要实现过渡效果的组件。
 
-### 语法格式
+### 15.1.1. 语法格式
 
     <transition name = "nameoftransition">
       <div></div>
@@ -1606,7 +1614,7 @@ Vue 提供了内置的过渡封装组件，该组件用于包裹要实现过渡�
 
 v-enter-active 和 v-leave-active 可以控制进入/离开过渡的不同的缓和曲线，在下面章节会有个示例说明。
 
-### CSS 过渡
+### 15.1.2. CSS 过渡
 
 通常我们都使用 CSS 过渡来实现效果。
 
@@ -1652,7 +1660,7 @@ v-enter-active 和 v-leave-active 可以控制进入/离开过渡的不同的缓
     </body>
     </html>
 
-### CSS 动画
+### 15.1.3. CSS 动画
 
 CSS 动画用法类似 CSS 过渡，但是在动画中 v-enter 类名在节点插入 DOM 后不会立即删除，而是在 animationend 事件触发时删除。
 
@@ -1700,7 +1708,7 @@ CSS 动画用法类似 CSS 过渡，但是在动画中 v-enter 类名在节点�
     </body>
     </html>
 
-### 自定义过渡的类名
+### 15.1.4. 自定义过渡的类名
 
 我们可以通过以下特性来自定义过渡类名：
 
@@ -1743,13 +1751,13 @@ CSS 动画用法类似 CSS 过渡，但是在动画中 v-enter 类名在节点�
     </body>
     </html>
 
-### 同时使用过渡和动画
+### 15.1.5. 同时使用过渡和动画
 
 Vue 为了知道过渡的完成，必须设置相应的事件监听器。它可以是 transitionend 或 animationend ，这取决于给元素应用的 CSS 规则。如果你使用其中任何一种，Vue 能自动识别类型并设置监听。
 
 但是，在一些场景中，你需要给同一个元素同时设置两种过渡动效，比如 animation 很快的被触发并完成了，而 transition 效果还没结束。在这种情况中，你就需要使用 type 特性并设置 animation 或 transition 来明确声明你需要 Vue 监听的类型。
 
-### 显性的过渡持续时间
+### 15.1.6. 显性的过渡持续时间
 在很多情况下，Vue 可以自动得出过渡效果的完成时机。默认情况下，Vue 会等待其在过渡效果的根元素的第一个 transitionend 或 animationend 事件。然而也可以不这样设定——比如，我们可以拥有一个精心编排的一系列过渡效果，其中一些嵌套的内部元素相比于过渡效果的根元素有延迟的或更长的过渡效果。
 
 在这种情况下你可以用 <transition> 组件上的 duration 属性定制一个显性的过渡持续时间 (以毫秒计)：
@@ -1760,7 +1768,7 @@ Vue 为了知道过渡的完成，必须设置相应的事件监听器。它可�
 
     <transition :duration="{ enter: 500, leave: 800 }">...</transition>    
 
-## JavaScript 钩子
+## 15.2. JavaScript 钩子
 
 可以在属性中声明 JavaScript 钩子:
 
@@ -1870,7 +1878,7 @@ Vue 为了知道过渡的完成，必须设置相应的事件监听器。它可�
     })
     </script>
 
-## 初始渲染的过渡
+## 15.3. 初始渲染的过渡
 可以通过 appear 特性设置节点在初始渲染的过渡
 
     <transition appear>
@@ -1900,7 +1908,7 @@ Vue 为了知道过渡的完成，必须设置相应的事件监听器。它可�
       <!-- ... -->
     </transition>
 
-### 多个元素的过渡
+### 15.3.1. 多个元素的过渡
 我们可以设置多个元素的过渡，一般列表与描述：
 
 需要注意的是当有相同标签名的元素切换时，需要通过 key 特性设置唯一的值来标记以让 Vue 区分它们，否则 Vue 为了效率只会替换相同标签内部的内容。
@@ -1964,7 +1972,7 @@ Vue 为了知道过渡的完成，必须设置相应的事件监听器。它可�
       }
     }    
 
-# Vue.js 混入
+# 16. Vue.js 混入
 
 混入 (mixins)定义了一部分可复用的方法或者计算属性。混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被混入该组件本身的选项。
 
@@ -2006,7 +2014,7 @@ Vue 为了知道过渡的完成，必须设置相应的事件监听器。它可�
     </body>
     </html>
 
-## 选项合并
+## 16.1. 选项合并
 
 当组件和混入对象含有同名选项时，这些选项将以恰当的方式混合。
 
@@ -2066,7 +2074,7 @@ Vue 为了知道过渡的完成，必须设置相应的事件监听器。它可�
 
 从输出结果 methods 选项中如果碰到相同的函数名则 Vue 实例有更高的优先级会执行输出。    
 
-## 全局混入
+## 16.2. 全局混入
 
 也可以全局注册混入对象。注意使用！ 一旦使用全局混入对象，将会影响到 所有 之后创建的 Vue 实例。使用恰当时，可以为自定义对象注入处理逻辑。
 
@@ -2087,14 +2095,14 @@ Vue 为了知道过渡的完成，必须设置相应的事件监听器。它可�
 
 谨慎使用全局混入对象，因为会影响到每个单独创建的 Vue 实例 (包括第三方模板)。
 
-# Vue.js Ajax(vue-resource)
+# 17. Vue.js Ajax(vue-resource)
 
 Vue 要实现异步加载需要使用到 vue-resource 库。
 
     <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js">
     </script>
 
-## Get 请求
+## 17.1. Get 请求
 
 以下是一个简单的 Get 请求实例，请求地址是一个简单的 txt 文本：    
 
@@ -2125,7 +2133,7 @@ Vue 要实现异步加载需要使用到 vue-resource 库。
         console.log(res.status);
     });
 
-## post 请求
+## 17.2. post 请求
 post 发送数据到后端，需要第三个参数 {emulateJSON:true}。
 
 emulateJSON 的作用： 如果Web服务器无法处理编码为 application/json 的请求，你可以启用 emulateJSON 选项。    
@@ -2149,7 +2157,7 @@ emulateJSON 的作用： 如果Web服务器无法处理编码为 application/jso
         });
     }
 
-## 语法 & API
+## 17.3. 语法 & API
 
 你可以使用全局对象方式 Vue.http 或者在一个 Vue 实例的内部使用 this.$http来发起 HTTP 请求。
 
@@ -2203,7 +2211,7 @@ options 参数说明:
 |json()|约定值|以格式化后的json对象方式返回响应体|
 |blob()|约定值|以二进制Blob对象方式返回响应体|
 
-# Vue.js 响应接口
+# 18. Vue.js 响应接口
 
 Vue 可以添加数据动态响应接口。
 
@@ -2238,7 +2246,7 @@ Vue 不能检测到对象属性的添加或删除，最好的方式就是在初�
 
 如果我们需要在运行过程中实现属性的添加或删除，则可以使用全局 Vue，Vue.set 和 Vue.delete 方法。
 
-## Vue.set
+## 18.1. Vue.set
 
 Vue.set 方法用于设置对象的属性，它可以解决 Vue 无法检测添加属性的限制，语法格式如下：
 
@@ -2311,7 +2319,7 @@ Vue.set 方法用于设置对象的属性，它可以解决 Vue 无法检测添�
 
 从控制台输出的结果可以看出 get/set 方法可用于qty 属性。
 
-## Vue.delete
+## 18.2. Vue.delete
 
 Vue.delete 用于删除动态添加的属性 语法格式：
 
@@ -2344,7 +2352,7 @@ Vue.delete 用于删除动态添加的属性 语法格式：
 
 从上图输出结果中，我们可以看到 price 属性已删除，只剩下了 id 和 name 属性，price 属性的 get/set 方法也已删除。
 
-# Vue.js 实例
+# 19. Vue.js 实例
 本章节为大家介绍几个 Vue.js 实例，通过实例练习来巩固学到的知识点。
 
 导航菜单实例
